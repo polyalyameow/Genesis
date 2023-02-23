@@ -1,0 +1,53 @@
+@use 'fonts';
+
+@mixin aLink ($link,  $decoration, $hover){
+       & { color: $link;
+        text-decoration: $decoration;
+        &:hover{
+            color: $hover;
+        }
+       }
+}
+
+.nav{
+    margin-top: 61px;
+    max-width: 1109px;
+    width: 100%;
+    border: 2px yellow solid;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    &__logo{
+        width: 90.13px;
+        height: 19.34px;
+        align-self: center;
+    }
+
+    &__list{
+        width: 15%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        border: 2px salmon solid;
+        list-style: none;
+        font-family: fonts.$main-font;
+        font-weight: map-get(fonts.$font-weights, bold);
+        font-size: 18px;
+        line-height: 23px;
+        letter-spacing: -0.346154px;
+        color: fonts.$text-color;
+
+
+
+    }
+    &__list-bullet{
+        border: 1px darkblue solid;
+        
+    }
+
+    &__a-link{
+        @include aLink (black, none, orange);
+    }
+
+}
