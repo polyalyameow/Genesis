@@ -1,6 +1,9 @@
 @import 'nav';
 @import 'main';
 @import 'grid';
+@import 'content';
+@import 'awards';
+@import 'footer';
 
 html{
     display: flex;
@@ -16,7 +19,7 @@ body{
     flex-direction: column;
     align-items: center;
     margin: 0;
-    border: 2px solid rebeccapurple;
+    // border: 2px solid rebeccapurple;
     
 }
 

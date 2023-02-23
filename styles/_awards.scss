@@ -1,0 +1,86 @@
+@use 'fonts';
+
+.awards{
+    max-width: 1110px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 51px;
+    // border: 2px solid green;
+    
+
+    &__line{
+        height: 2px;
+        width: 100%;
+        color: #D8D8D8;
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-top: 50px;
+        padding-bottom: 58px;
+
+    }
+
+    &__text__title{
+        font-size: 22px;
+        line-height: 28px;
+        font-family: fonts.$main-font;
+        font-weight: map-get(fonts.$font-weights, bold);
+        color: fonts.$text-color;
+    }
+
+    &__text-info{
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    &__text-info-1{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    &__text-info-1-title{
+        font-size: 18px;
+        line-height: 23px;
+        font-family: fonts.$main-font;
+        font-weight: map-get(fonts.$font-weights, bold);
+        color: fonts.$text-color;
+    }
+
+    &__text-info-1-text{
+        display: flex;
+        flex-direction: column;
+        width: 25%;
+    }
+
+    &__text-info-1-text-1 {
+        font-size: 16px;
+        line-height: 20px;
+        font-family: fonts.$main-font;
+        font-weight: map-get(fonts.$font-weights, regular);
+        color: fonts.$text-color;
+    }
+
+    &__text-info-1-text-2{
+        font-size: 16px;
+        line-height: 26px;
+        font-family: fonts.$main-font;
+        font-weight: map-get(fonts.$font-weights, regular);
+        color: fonts.$text-color;
+        opacity: 0.6;
+    }
+
+    &__text-info-1-text-digits{
+        font-size: 16px;
+        line-height: 20px;
+        font-family: fonts.$main-font;
+        font-weight: map-get(fonts.$font-weights, regular);
+        color: fonts.$text-color;
+    }
+}

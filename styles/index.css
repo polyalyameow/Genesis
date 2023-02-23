@@ -2,7 +2,6 @@
   margin-top: 61px;
   max-width: 1109px;
   width: 100%;
-  border: 2px yellow solid;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -33,7 +32,6 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  border: 2px salmon solid;
   list-style: none;
   font-family: "Mulish", sans-serif;
   font-weight: 700;
@@ -41,9 +39,6 @@
   line-height: 23px;
   letter-spacing: -0.346154px;
   color: #111111;
-}
-.nav__list-bullet {
-  border: 1px darkblue solid;
 }
 .nav__a-link {
   color: black;
@@ -67,7 +62,6 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  border: 2px solid seagreen;
   margin-bottom: 77px;
 }
 .main__text {
@@ -130,6 +124,292 @@
   padding-top: 10px;
 }
 
+.grid {
+  max-width: 1110px;
+  width: 100%;
+  padding-bottom: 60px;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "one one one two two two three three three" "one one one two two two three three three" "one one one two two two three three three" "one one one two two two three three three" "one one one two two two three three three" "one one one two two two three three three" "one one one five five five three three three" "four four four five five five three three three" "four four four five five five three three three" "four four four five five five three three three" "four four four five five five six six six" "four four four five five five six six six" "four four four five five five six six six" "four four four eight eight eight six six six" "four four four eight eight eight six six six" "seven seven seven eight eight eight six six six" "seven seven seven eight eight eight six six six" "seven seven seven eight eight eight nine nine nine" "seven seven seven eight eight eight nine nine nine" "seven seven seven eight eight eight nine nine nine" "seven seven seven eight eight eight nine nine nine" "seven seven seven eight eight eight nine nine nine" "seven seven seven eleven eleven eleven nine nine nine" "ten ten ten eleven eleven eleven nine nine nine" "ten ten ten eleven eleven eleven nine nine nine" "ten ten ten eleven eleven eleven nine nine nine" "ten ten ten eleven eleven eleven twelve twelve twelve" "ten ten ten eleven eleven eleven twelve twelve twelve" "ten ten ten eleven eleven eleven twelve twelve twelve" "ten ten ten eleven eleven eleven twelve twelve twelve" "ten ten ten eleven eleven eleven twelve twelve twelve" "ten ten ten eleven eleven eleven twelve twelve twelve";
+  row-gap: 20px;
+}
+.grid__item-1 {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 13;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: one;
+}
+.grid__item-2 {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 11;
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 3;
+  grid-area: two;
+}
+.grid__item-3 {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 19;
+  -ms-grid-column: 7;
+  -ms-grid-column-span: 3;
+  grid-area: three;
+}
+.grid__item-4 {
+  -ms-grid-row: 15;
+  -ms-grid-row-span: 15;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: four;
+}
+.grid__item-5 {
+  -ms-grid-row: 13;
+  -ms-grid-row-span: 13;
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 3;
+  grid-area: five;
+}
+.grid__item-6 {
+  -ms-grid-row: 21;
+  -ms-grid-row-span: 13;
+  -ms-grid-column: 7;
+  -ms-grid-column-span: 3;
+  grid-area: six;
+}
+.grid__item-7 {
+  -ms-grid-row: 31;
+  -ms-grid-row-span: 15;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: seven;
+}
+.grid__item-8 {
+  -ms-grid-row: 27;
+  -ms-grid-row-span: 17;
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 3;
+  grid-area: eight;
+}
+.grid__item-9 {
+  -ms-grid-row: 35;
+  -ms-grid-row-span: 17;
+  -ms-grid-column: 7;
+  -ms-grid-column-span: 3;
+  grid-area: nine;
+}
+.grid__item-10 {
+  -ms-grid-row: 47;
+  -ms-grid-row-span: 17;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: ten;
+}
+.grid__item-11 {
+  -ms-grid-row: 45;
+  -ms-grid-row-span: 19;
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 3;
+  grid-area: eleven;
+}
+.grid__item-12 {
+  -ms-grid-row: 53;
+  -ms-grid-row-span: 11;
+  -ms-grid-column: 7;
+  -ms-grid-column-span: 3;
+  grid-area: twelve;
+}
+
+.content {
+  max-width: 1109px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 31px;
+  padding-bottom: 50px;
+}
+.content__text {
+  width: 58%;
+  font-family: "Mulish", sans-serif;
+  font-weight: 700;
+  color: #111111;
+  font-size: 28px;
+  line-height: 38px;
+}
+.content__choices {
+  height: 85%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 25px;
+}
+.content__choices-1-point, .content__choices-2-point {
+  padding-top: 10px;
+}
+.content__choices-1, .content__choices-2 {
+  list-style: none;
+  font-family: "Mulish", sans-serif;
+  font-weight: 400;
+  color: #111111;
+  font-size: 18px;
+  line-height: 23px;
+  opacity: 0.6;
+}
+
+.awards {
+  max-width: 1110px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-top: 51px;
+}
+.awards__line {
+  height: 2px;
+  width: 100%;
+  color: #D8D8D8;
+}
+.awards__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 50px;
+  padding-bottom: 58px;
+}
+.awards__text__title {
+  font-size: 22px;
+  line-height: 28px;
+  font-family: "Mulish", sans-serif;
+  font-weight: 700;
+  color: #111111;
+}
+.awards__text-info {
+  width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.awards__text-info-1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.awards__text-info-1-title {
+  font-size: 18px;
+  line-height: 23px;
+  font-family: "Mulish", sans-serif;
+  font-weight: 700;
+  color: #111111;
+}
+.awards__text-info-1-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 25%;
+}
+.awards__text-info-1-text-1 {
+  font-size: 16px;
+  line-height: 20px;
+  font-family: "Mulish", sans-serif;
+  font-weight: 400;
+  color: #111111;
+}
+.awards__text-info-1-text-2 {
+  font-size: 16px;
+  line-height: 26px;
+  font-family: "Mulish", sans-serif;
+  font-weight: 400;
+  color: #111111;
+  opacity: 0.6;
+}
+.awards__text-info-1-text-digits {
+  font-size: 16px;
+  line-height: 20px;
+  font-family: "Mulish", sans-serif;
+  font-weight: 400;
+  color: #111111;
+}
+
+.footer {
+  max-width: 1110px;
+  width: 100%;
+  padding-top: 53px;
+  padding-bottom: 47px;
+}
+.footer__lists {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 35%;
+}
+.footer__ul {
+  padding: 0;
+  width: 40%;
+}
+.footer__icons {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 20%;
+}
+
 html {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -158,5 +438,4 @@ body {
       -ms-flex-align: center;
           align-items: center;
   margin: 0;
-  border: 2px solid rebeccapurple;
 }

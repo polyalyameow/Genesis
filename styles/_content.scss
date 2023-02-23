@@ -1,0 +1,49 @@
+@use 'fonts';
+
+
+.content{
+    max-width: 1109px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 31px;
+    padding-bottom: 50px;
+    // border: 2px red solid;
+
+    &__text{
+        width: 58%;
+        font-family: fonts.$main-font;
+        font-weight: map-get(fonts.$font-weights, bold);
+        color: fonts.$text-color;
+        font-size: 28px;
+        line-height: 38px;
+        // border: 2px saddlebrown solid;
+    }
+
+    &__choices{
+        height: 85%;
+        display: flex;
+        flex-direction: row;
+        // border: 2px darkcyan solid;
+        align-items: center;
+        margin-right: 25px;
+       
+    }
+
+    &__choices-1-point,
+    &__choices-2-point{
+        padding-top: 10px;
+    }
+
+    &__choices-1,
+    &__choices-2{
+        list-style: none;
+        font-family: fonts.$main-font;
+        font-weight: map-get(fonts.$font-weights, regular);
+        color: fonts.$text-color;
+        font-size: 18px;
+        line-height: 23px;
+        opacity: 0.6;
+    }
+}
