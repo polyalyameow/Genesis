@@ -8,11 +8,13 @@
     flex-direction: row;
     justify-content: space-between;
     border: 2px solid seagreen;
+    margin-bottom: 77px;
 
     &__text{
-        width: 50%;
+        width: 60%;
         display: flex;
         flex-direction: column;
+        // border: 2px solid rebeccapurple;
     }
     &__text-1{
         font-size: 22px;
@@ -24,10 +26,44 @@
         letter-spacing: -0.423077px;
     }
 
+    &__title{
+        font-family: fonts.$main-font;
+        font-weight: map-get(fonts.$font-weights, bold);
+        font-size: 40px;
+        line-height: 60px;
+        color: fonts.$text-color;
+    }
+
+    &__title-accent{
+        color: fonts.$accent-color;
+    }
 
     &__quote{
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
+        // border: 2px solid royalblue;
+        padding-right: 55px;
+    }
+    &__quote-line{
+        width: 30px;
+        color: black;
+        // border: 2px solid palegreen;
+        margin: 0;
+
+
+    }
+    &__quote-text{
+        // border: 2px solid sandybrown;
+        font-family: fonts.$main-font;
+        color: fonts.$text-color;
+        font-weight: map-get(fonts.$font-weights, regular);
+        font-style: italic;
+        font-size: 18px;
+        line-height: 23px;
+        opacity: 0.6;
+        margin-top: 0;
+        padding-bottom: 18px;
+        padding-top: 10px;
     }
 }
