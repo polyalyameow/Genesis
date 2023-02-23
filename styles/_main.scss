@@ -1,19 +1,57 @@
 @use 'fonts';
 
+
+
+@mixin displayFlex($property){
+    -webkit-box: $property;
+    -ms-flexbox: $property;
+    display: $property;
+}
+
+
+@mixin directionRow($property){
+    -webkit-box-orient: $property;
+    -webkit-box-direction: $property;
+        -ms-flex-direction: $property;
+            flex-direction: $property;
+}
+
+
+@mixin justifySpace($property){
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+}
+
+
+@mixin directionColumn($property){
+    -webkit-box-orient: $property;
+    -webkit-box-direction: $property;
+    -ms-flex-direction: $property;
+        flex-direction: $property;
+}
+
+
+@mixin justifyFlend($property){
+    -webkit-box-pack: $property;
+    -ms-flex-pack: $property;
+        justify-content: $property;
+}
+
 .main{
     max-width: 1109px;
     width: 100%;
     margin-top: 96px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    @include displayFlex(flex);
+    @include directionRow(row);
+    @include justifySpace(space-between);
     // border: 2px solid seagreen;
     margin-bottom: 77px;
 
     &__text{
         width: 60%;
-        display: flex;
-        flex-direction: column;
+        @include displayFlex(flex);
+        @include directionColumn(column);
         // border: 2px solid rebeccapurple;
     }
     &__text-1{
@@ -39,9 +77,9 @@
     }
 
     &__quote{
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
+        @include displayFlex(flex);
+        @include directionColumn(column);
+        @include justifyFlend(flex-end);
         // border: 2px solid royalblue;
         padding-right: 55px;
     }

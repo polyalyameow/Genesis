@@ -5,19 +5,40 @@
 @import 'awards';
 @import 'footer';
 
+
+@mixin displayFlex($property){
+    -webkit-box: $property;
+    -ms-flexbox: $property;
+    display: $property;
+}
+
+@mixin directionColumn($property){
+    -webkit-box-orient: $property;
+    -webkit-box-direction: $property;
+    -ms-flex-direction: $property;
+        flex-direction: $property;
+}
+
+
+@mixin alignItems($property){
+    -webkit-box-align: $property;
+    -ms-flex-align: $property;
+        align-items: $property; 
+}
+
 html{
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
+    @include displayFlex(flex);
+    @include directionColumn(column);
+    @include alignItems(center);
 }
 
 body{
     max-width: 1360px;
     width: 100%;
     height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include displayFlex(flex);
+    @include directionColumn(column);
+    @include alignItems(center);
     margin: 0;
     // border: 2px solid rebeccapurple;
     

@@ -1,9 +1,16 @@
+
+@mixin grid($property){
+   -ms-grid: $property;
+    display: $property;
+}
+
+
 .grid{
     max-width: 1110px;
     // border: 2px solid firebrick;
     width: 100%;
     padding-bottom: 60px;
-    display: grid;
+    @include grid(grid);
     grid-template-areas: 
         "one one one two two two three three three"
         "one one one two two two three three three"

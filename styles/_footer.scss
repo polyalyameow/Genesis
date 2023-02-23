@@ -1,3 +1,28 @@
+@mixin displayFlex($property){
+    -webkit-box: $property;
+    -ms-flexbox: $property;
+    display: $property;
+}
+
+@mixin directionRow($property){
+    -webkit-box-orient: $property;
+    -webkit-box-direction: $property;
+        -ms-flex-direction: $property;
+            flex-direction: $property;
+}
+
+@mixin justifySpace($property){
+    -webkit-box-pack: $property;
+    -ms-flex-pack: $property;
+        justify-content: $property;
+}
+
+@mixin alignSelf($property){
+    -ms-flex-item-align: $property;
+    -ms-grid-row-align: $property;
+    align-self: $property;
+}
+
 .footer{
     max-width: 1110px;
     width: 100%;
@@ -6,9 +31,9 @@
 
 
     &__lists{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+        @include displayFlex(flex);
+        @include directionRow(row);
+        @include justifySpace(space-between);
         // border: 2px solid fuchsia;
         width: 35%;
     }
@@ -20,11 +45,11 @@
     }
 
     &__icons{
-        align-self: center;
+        @include  alignSelf(center);
         padding: 0;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+        @include displayFlex(flex);
+        @include directionRow(row);
+        @include justifySpace(space-between);
         width: 20%;
     }
 }

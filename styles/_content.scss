@@ -1,12 +1,38 @@
 @use 'fonts';
 
 
+@mixin displayFlex($property){
+    -webkit-box: $property;
+    -ms-flexbox: $property;
+    display: $property;
+}
+
+@mixin directionRow($property){
+    -webkit-box-orient: $property;
+    -webkit-box-direction: $property;
+        -ms-flex-direction: $property;
+            flex-direction: $property;
+}
+
+@mixin justifySpace($property){
+    -webkit-box-pack: $property;
+    -ms-flex-pack: $property;
+        justify-content: $property;
+}
+
+
+@mixin alignItems($property){
+    -webkit-box-align: $property;
+    -ms-flex-align: $property;
+        align-items: $property; 
+}
+
 .content{
     max-width: 1109px;
     width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    @include displayFlex(flex);
+    @include directionRow(row);
+    @include justifySpace(space-between);
     padding-top: 31px;
     padding-bottom: 50px;
     // border: 2px red solid;
@@ -23,10 +49,10 @@
 
     &__choices{
         height: 85%;
-        display: flex;
-        flex-direction: row;
+        @include displayFlex(flex);
+        @include directionRow(row);
         // border: 2px darkcyan solid;
-        align-items: center;
+        @include alignItems(center);
         margin-right: 25px;
        
     }
