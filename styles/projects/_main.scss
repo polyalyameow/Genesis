@@ -1,0 +1,82 @@
+@use '../fonts';
+
+
+@mixin displayFlex($property){
+    -webkit-box: $property;
+    -ms-flexbox: $property;
+    display: $property;
+}
+
+@mixin directionRow($property){
+    -webkit-box-orient: $property;
+    -webkit-box-direction: $property;
+        -ms-flex-direction: $property;
+            flex-direction: $property;
+}
+
+@mixin justifySpace($property){
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+}
+
+
+.main{
+    max-width: 1360px;
+    width: 80%;
+    padding-top: 50px;
+    margin-top: 50px;
+    @include displayFlex(flex);
+    @include directionRow(row);
+    @include justifySpace(space-between);
+ 
+
+    &__text{
+        width: 58%;
+    }
+
+    &__text-title{
+        width: 75%;
+        font-size: 40px;
+        line-height: 55px;
+        font-family: fonts.$main-font;
+        font-weight: map-get(fonts.$font-weights, bold);
+        color: fonts.$text-color;
+    }
+
+    &__text-text-1{
+        font-size: 16px;
+        line-height: 26px;
+        opacity: 0.8;
+        font-family: fonts.$main-font;
+        font-weight: map-get(fonts.$font-weights, regular);
+        color: fonts.$text-color;
+    }
+
+    &__info{
+        @include displayFlex(flex);
+        flex-direction: column;
+        justify-content: center;
+        width: 25%;
+       
+    }
+
+    &__info-project{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        
+    }
+
+    &___info-gray{
+
+    }
+
+    &___info-black{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        width: 100%;
+    }
+}
