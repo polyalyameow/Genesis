@@ -14,7 +14,7 @@
   <body>
     <nav class="nav">
         <div class="nav__logo">
-          <a class="nav__a-link-logo" href="./index.html"
+          <a class="nav__a-link-logo" href="../index.html"
             ><img class="nav__logo-img" src="../images/logo.svg" alt="Logo"
           /></a>
         </div>
@@ -23,7 +23,7 @@
             <a class="nav__a-link" href="../pages/projects.html">Projects</a>
           </li>
           <li class="nav__list-bullet">
-            <a class="nav__a-link" href=".,/pages/contacts.html">Contact</a>
+            <a class="nav__a-link" href="../pages/contacts.html">Contact</a>
           </li>
         </ul>
       </nav>
@@ -35,41 +35,72 @@
             <p class="contacts__main__text-text">Our favorite brands are our friends! We help them to achieve their goals, they help us to stay sharp.</p>
         </div>
         <form class="contacts__main__form" autocomplete="off">
-            <div class="main__form-text">
+            <div class="contacts__main__form-text">
                 <input
                 type="text"
                 name="name"
                 id="name"
-                class="input-field"
+                class="contacts__main__input-field"
                 placeholder="Name"
               />
               <input
               type="email"
               name="email"
               id="email"
-              class="input-field"
+              class="contacts__main__input-field"
               placeholder="Email"
               required
-              autofocus
+              
             />
             <textarea
             type="text"
             rows="3"
-            cols="5"
+            cols="3"
             name="comment"
             form="usrform"
-            class="txt-area"
+            class="contacts__main__txt-area"
             placeholder="Message"
           ></textarea>
+
             </div>
             <div class="contacts__main__btn">
           
-                <button type="submit" class="main__btn-btn"><a class="main__btn-link" href="#">Submit</a></button>
+                <button type="submit" class="contacts__main__btn-btn"><a class="contacts__main__btn-link" href="#">Submit</a></button>
             
             </div>
         </form>
       </div>
-
+      <div class="map">
+        <img src="../images/Map.png" alt="Map">
+      </div>
+      <footer class="footer nav">
+        <div class="nav__logo">
+            <a class="nav__a-link-logo" href="../index.html"
+              ><img class="nav__logo-img" src="../images/logo.svg" alt="Logo"
+            /></a>
+          </div>
+          <div class="footer__lists">
+          <ul class="nav__list footer__ul">
+            <li class="nav__list-bullet">
+              <a class="nav__a-link" href="#">Projects</a>
+            </li>
+            <li class="nav__list-bullet">
+              <a class="nav__a-link" href="#">Contact</a>
+            </li>
+          </ul>
+          <ul class="footer__icons">
+            <a class="footer__icons-icon" href="#">
+                <img src="../images/dribbble-logo.svg" alt="Dribble">
+            </a>
+            <a class="footer__icons-icon" href="#">
+                <img src="../images/instagram.svg" alt="Instagram">
+            </a>
+            <a class="footer__icons-icon" href="#">
+                <img src="../images/twitter-logo.svg" alt="Twitter">
+            </a>
+          </ul>
+        </div>
+    </footer>
 
   </body>
   </html>

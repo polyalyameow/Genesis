@@ -2,6 +2,7 @@
 @import 'main';
 @import 'project-grid';
 
+
 @mixin displayFlex($property){
     -webkit-box: $property;
     -ms-flexbox: $property;

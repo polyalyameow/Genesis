@@ -1,5 +1,7 @@
 @import '../nav';
 @import 'main';
+@import 'map';
+@import '../footer';
 
 @mixin displayFlex($property){
     -webkit-box: $property;

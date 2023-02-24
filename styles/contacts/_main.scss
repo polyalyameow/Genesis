@@ -1,5 +1,17 @@
 @use '../fonts';
 
+@mixin button-colors($colors) {
+    background: $colors;
+    &:hover {
+        background: darken($colors, 8%);
+        transition: all 0.3s ease;
+    }
+
+    &:active {
+        background: darken($colors, 25%);
+    }
+}
+
 .contacts__main{
     max-width: 1110px;
     width: 100%;
@@ -8,6 +20,7 @@
     justify-content: space-between;
     padding-top: 50px;
     margin-top: 60px;
+    padding-bottom: 60px;
 
 
     &__text{
@@ -30,5 +43,65 @@
         color: fonts.$text-color;
         opacity: 0.8;
     }
+
+    &__form{
+        display: flex;
+        flex-direction: column;
+        max-width: 475px;
+        width: 100%; 
+        margin-top: 20px;
+    }
+
+    &__form-text{
+        display: flex;
+        flex-direction: column;
+       
+        
+    }
+
+    &__input-field,
+    &__txt-area {
+        height: 37px;
+        margin-bottom: 46px;
+        resize: none;
+    }
+
+    &__input-field::-webkit-input-placeholder,
+    &__txt-area::-webkit-input-placeholder {
+        font-size: 16px;
+        line-height: 20px;
+        font-family: fonts.$main-font;
+        font-weight: map-get(fonts.$font-weights, bold);
+        color: fonts.$text-color;
+        opacity: 0.6;
+
+    }
+
+    &__btn-btn{
+        width: 125px;
+        border: none;
+        height: 50px;
+        @include button-colors(#4A4FF2)
+    }
+
+
+    &__btn-link{
+        text-decoration: none;
+        color: white;
+        font-size: 16px;
+        line-height: 20px;
+        font-family: fonts.$main-font;
+        font-weight: map-get(fonts.$font-weights, bold);
+        color: fonts.$button-color;
+    }
 }
+
+input[type=text],
+input[type=email],
+textarea[type=text]{
+    border: none;
+    border-bottom: 1px solid #D8D8D8;;
+    background-color: transparent;
+}
+
 
