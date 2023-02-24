@@ -1,9 +1,41 @@
 @use '../fonts';
 
+
+@mixin displayFlex($property){
+    -webkit-box: $property;
+    -ms-flexbox: $property;
+    display: $property;
+}
+
+
+@mixin directionRow($property){
+    -webkit-box-orient: $property;
+    -webkit-box-direction: $property;
+        -ms-flex-direction: $property;
+            flex-direction: $property;
+}
+
+
+@mixin justifySpace($property){
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+}
+
+
+@mixin directionColumn($property){
+    -webkit-box-orient: $property;
+    -webkit-box-direction: $property;
+    -ms-flex-direction: $property;
+        flex-direction: $property;
+}
+
 @mixin button-colors($colors) {
     background: $colors;
     &:hover {
         background: darken($colors, 8%);
+        -webkit-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
         transition: all 0.3s ease;
     }
 
@@ -15,9 +47,9 @@
 .contacts__main{
     max-width: 1110px;
     width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    @include displayFlex(flex);
+    @include directionRow(row);
+    @include justifySpace(space-between);
     padding-top: 50px;
     margin-top: 60px;
     padding-bottom: 60px;
@@ -45,16 +77,16 @@
     }
 
     &__form{
-        display: flex;
-        flex-direction: column;
+        @include displayFlex(flex);
+        @include directionColumn(column);
         max-width: 475px;
         width: 100%; 
         margin-top: 20px;
     }
 
     &__form-text{
-        display: flex;
-        flex-direction: column;
+        @include displayFlex(flex);
+        @include directionColumn(column);
        
         
     }
