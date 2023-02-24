@@ -1,0 +1,46 @@
+@use '../fonts';
+@import '../footer';
+
+.project-grid{
+    padding-top: 61px;
+    margin-bottom: 18px;
+    max-width: 1110px;
+    width: 100%;
+    display: grid;
+    grid-template-areas: 
+    "pic1 pic1 pic1"
+    "text text text"
+    "pic2 pic3 pic4";
+    column-gap: 30px;
+
+    &__item1{
+        grid-area: pic1;
+    }
+
+    &__item2{
+        grid-area: text;
+        font-size: 16px;
+        line-height: 26px;
+        font-family: fonts.$main-font;
+        font-weight: map-get(fonts.$font-weights, regular);
+        color: fonts.$text-color;
+        opacity: 0.8;
+    }
+
+
+    &__item3{
+        grid-area: pic2;
+    }
+
+    &__item4{
+        grid-area:pic3;
+    }
+
+    &__item5{
+        grid-area:pic4;
+       
+    }
+
+
+}
+

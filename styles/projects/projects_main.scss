@@ -1,5 +1,6 @@
 @import '../nav';
 @import 'main';
+@import 'project-grid';
 
 @mixin displayFlex($property){
     -webkit-box: $property;
@@ -36,6 +37,6 @@ body{
     @include directionColumn(column);
     @include alignItems(center);
     margin: 0;
-    border: 2px saddlebrown solid;
+    // border: 2px saddlebrown solid;
 }
  

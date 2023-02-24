@@ -54,29 +54,51 @@
     }
 
     &__info{
-        @include displayFlex(flex);
-        flex-direction: column;
-        justify-content: center;
-        width: 25%;
+        margin-top: 40px;
+        width: 30%;
+        // border: 2px solid green;
+        overflow: hidden;
        
     }
 
-    &__info-project{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        width: 100%;
+    &__info-project-text{
+        @include displayFlex(flex);
+        @include directionRow(row);
+        @include justifySpace(space-between);
+        
         
     }
 
-    &___info-gray{
+    &__info-project-line{
+        height: 1px;
+        color: #D8D8D8;
+        opacity: 0.3;
+        margin-top: 0;
+    }
+
+
+
+     &__info-gray{
+        font-family: fonts.$main-font;
+        font-weight: map-get(fonts.$font-weights, bold);
+        font-size: 18px;
+        line-height: 23px;
+        color: fonts.$text-color;
+        opacity: 0.5;
+        margin-top: 0;
+        
 
     }
 
-    &___info-black{
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        width: 100%;
+     &__info-black{
+        font-family: fonts.$main-font;
+        font-weight: map-get(fonts.$font-weights, bold);
+        font-size: 18px;
+        line-height: 23px;
+        color: fonts.$text-color;
+        margin-top: 0;
+        width: 60%;
+       
     }
+
 }
