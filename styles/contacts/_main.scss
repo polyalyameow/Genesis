@@ -134,6 +134,11 @@ textarea[type=text]{
     border: none;
     border-bottom: 1px solid #D8D8D8;;
     background-color: transparent;
+    font-family: fonts.$main-font;
+    font-weight: map-get(fonts.$font-weights, light);
+    color: fonts.$text-color;
+    font-size: 16px;
+    line-height: 20px;
 }
 
 
